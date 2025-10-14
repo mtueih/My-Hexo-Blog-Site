@@ -11,7 +11,7 @@
 
 nav:
   # Navigation bar logo image
-  logo:
+  logo: /images/langmoyu-logo.png
   display_title: true
   display_post_title: true
   # Whether to fix navigation bar
@@ -57,17 +57,17 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: /images/langmoyu.png
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: /images/avatar.jpeg
   effect: false
 
 # Disable all banner images
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img:
+default_top_img: /images/wallpaper-0.jpg
 
 # The banner image of index page
 index_img:
@@ -92,7 +92,7 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: false
+footer_img: true
 
 # Website Background
 # Can set it to color or image url
@@ -152,7 +152,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -168,6 +168,9 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - 每个不曾起舞的日子，都是对生命的辜负。——尼采
+    - 也许你感觉自己的努力总是徒劳无功，但不必怀疑，你每天都离顶点更进一步。今天的你离顶点还遥遥无期。但你通过今天的努力，积蓄了明天勇攀高峰的力量。——尼采
+    - 千万不要忘记——我们飞翔得越高，我们在那些不能飞翔的人眼中的形象越是渺小！——尼采
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -177,7 +180,7 @@ subtitle:
 # 5: Info displayed on the cover
 # 6: Masonry layout - Cover on top, info on the bottom
 # 7: Masonry layout - Info displayed on the cover
-index_layout: 3
+index_layout: 2
 
 # Display the article introduction on homepage
 # 1: description
@@ -185,7 +188,7 @@ index_layout: 3
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
+  method: 2
   # If you set method to 2 or 3, the length need to config
   length: 500
 
@@ -199,7 +202,7 @@ toc:
   number: true
   expand: false
   # Only for post
-  style_simple: false
+  style_simple: true
   scroll_percent: true
 
 post_copyright:
@@ -241,11 +244,11 @@ related_post:
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: 1
+post_pagination: 2
 
 # Displays outdated notice for a post
 noticeOutdate:
-  enable: false
+  enable: true
   # Style: simple / flat
   style: flat
   # When will it be shown
@@ -287,12 +290,12 @@ aside:
     category: true
   card_author:
     enable: true
-    description:
+    description: 命里有时终须有，命里无时莫强求。
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      text: 我的 GitHub
+      link: https://github.com/mtueih
   card_announcement:
     enable: true
     content: This is my Blog
@@ -401,7 +404,7 @@ rightside_scroll_percent: false
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat the same value
 rightside_item_order:
-  enable: false
+  enable: true
   # Default: readmode,translate,darkmode,hideAside
   hide:
   # Default: toc,chat,comment
@@ -431,7 +434,7 @@ copy:
 
 # Need to install the hexo-wordcount plugin
 wordcount:
-  enable: false
+  enable: true
   # Display the word count of the article in post meta
   post_wordcount: true
   # Display the time to read the article in post meta
