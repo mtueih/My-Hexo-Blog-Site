@@ -19,13 +19,11 @@ nav:
 
 menu:
   首页: / || fas fa-home
-  时间轴: /archives/ || fas fa-archive
+  归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
-
-
 
 # --------------------------------------
 # Code Blocks Settings
@@ -33,10 +31,10 @@ menu:
 
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
-  theme: light
+  theme: pale night
   macStyle: false
   # Code block height limit (unit: px)
-  height_limit: false
+  height_limit: 1080
   word_wrap: false
 
   # Toolbar
@@ -50,8 +48,11 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  # fab fa-github: https://github.com/mtueih || Github || ''
+  fas fa-envelope: mailto:mtueih@outlook.com || Email || ''
+  # fab fa-discord: https://discord.com/users/mtueih_21868 || Discord || ''
+
+# https://discord.com/users/becauseimdavid
 
 # --------------------------------------
 # Image Settings
@@ -115,7 +116,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: '页面没有找到'
+  subtitle: "页面没有找到"
   background: /img/error-page.png
 
 post_meta:
@@ -130,7 +131,7 @@ post_meta:
     label: true
   post:
     # Choose: left / center
-    position: left
+    position: center
     # Choose: created / updated / both
     date_type: both
     # Choose: date / relative
@@ -199,7 +200,7 @@ index_post_content:
 toc:
   post: true
   page: false
-  number: true
+  number: false
   expand: false
   # Only for post
   style_simple: true
@@ -255,8 +256,8 @@ noticeOutdate:
   limit_day: 365
   # Position: top / bottom
   position: top
-  message_prev: It has been
-  message_next: days since the last update, the content of the article may be outdated.
+  message_prev: 距离上次更新已经有
+  message_next: 天了，文章的内容可能已经过时了。
 
 # --------------------------------------
 # Footer Settings
@@ -290,14 +291,14 @@ aside:
     category: true
   card_author:
     enable: true
-    description: 命里有时终须有，命里无时莫强求。
+    description: “命里有时终须有，命里无时莫强求。”
     button:
       enable: true
       icon: fab fa-github
       text: 我的 GitHub
       link: https://github.com/mtueih
   card_announcement:
-    enable: true
+    enable: false
     content: This is my Blog
   card_recent_post:
     enable: true
@@ -324,14 +325,14 @@ aside:
     enable: true
     # If set 0 will show all
     limit: 40
-    color: false
+    color: true
     # Order of tags, random/name/length
     orderby: random
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: 1
     sort_order:
   card_archives:
-    enable: true
+    enable: false
     # Type: monthly / yearly
     type: monthly
     # Eg: YYYY年MM月
@@ -346,7 +347,7 @@ aside:
     # The title shows the series name
     series_title: false
     # Order by title or date
-    orderBy: 'date'
+    orderBy: "date"
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
   card_webinfo:
@@ -376,9 +377,9 @@ translate:
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '繁'
+  msgToTraditionalChinese: "繁"
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '簡'
+  msgToSimplifiedChinese: "簡"
 
 # Read Mode
 readmode: true
@@ -392,19 +393,19 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 0
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
   start:
   end:
 
 # Show scroll percent in scroll-to-top button
-rightside_scroll_percent: false
+rightside_scroll_percent: true
 
 # Don't modify the following settings unless you know how they work
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat the same value
 rightside_item_order:
-  enable: true
+  enable: false
   # Default: readmode,translate,darkmode,hideAside
   hide:
   # Default: toc,chat,comment
@@ -458,8 +459,8 @@ busuanzi:
 math:
   # Choose: mathjax, katex
   # Leave it empty if you don't need math
-  use:
-  per_page: true
+  use: katex
+  per_page: false
   hide_scrollbar: false
 
   mathjax:
@@ -470,7 +471,7 @@ math:
 
   katex:
     # Enable the copy KaTeX formula
-    copy_tex: false
+    copy_tex: true
 
 # --------------------------------------
 # Search
@@ -479,7 +480,7 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
+  use: local_search
   placeholder:
 
   # Algolia Search
@@ -517,17 +518,17 @@ search:
 share:
   # Choose: sharejs / addtoany
   # Leave it empty if you don't need share
-  use: sharejs
+  use: 
 
   # Share.js
   # https://github.com/overtrue/share.js
   sharejs:
-    sites: facebook,x,wechat,weibo,qq
+    sites: wechat,qq,qzone,douban
 
   # AddToAny
   # https://www.addtoany.com/
   addtoany:
-    item: facebook,x,wechat,sina_weibo,facebook_messenger,email,copy_link
+    item: x,wechat,email,copy_link
 
 # --------------------------------------
 # Comments System
@@ -538,16 +539,16 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use:
+  use: Waline
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
   lazyload: false
   # Display comment count in post's top_img
-  count: false
+  count: true
   # Display comment count in Home Page
-  card_post_count: false
+  card_post_count: true
 
 # Disqus
 # https://disqus.com/
@@ -594,10 +595,10 @@ valine:
 # Waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL:
+  serverURL: https://waline-hexo-blog-comments-1h2ouyjf2-mtueihs-projects.vercel.app
   bg:
   # Use Waline pageview count as the page view count
-  pageview: false
+  pageview: true
   option:
 
 # Utterances
@@ -635,13 +636,19 @@ twikoo:
 # Giscus
 # https://giscus.app/
 giscus:
-  repo:
-  repo_id:
-  category_id:
+  repo: mtueih/Hexo-Blog-Site-Comments
+  repo_id: R_kgDOQI8jHw
+  category_id: DIC_kwDOQI8jH84CxDaM
   light_theme: light
   dark_theme: dark
   js:
   option:
+    data-mapping: "pathname"
+    data-lang: "zh-CN"
+    data-input-position: "top"
+    data-strict: "0"
+    data-reactions-enabled: "1"
+    data-emit-metadata: "0"
 
 # Remark42
 # https://remark42.com/docs/configuration/frontend/
@@ -761,23 +768,23 @@ site_verification:
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 
-# theme_color:
-#   enable: true
-#   main: "#49B1F5"
-#   paginator: "#00c4b6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00c4b6"
-#   link_color: "#99a9bf"
-#   meta_color: "#858585"
-#   hr_color: "#A4D8FA"
-#   code_foreground: "#F47466"
-#   code_background: "rgba(27, 31, 35, .05)"
-#   toc_color: "#00c4b6"
-#   blockquote_padding_color: "#49b1f5"
-#   blockquote_background_color: "#49b1f5"
-#   scrollbar_color: "#49b1f5"
-#   meta_theme_color_light: "ffffff"
-#   meta_theme_color_dark: "#0d0d0d"
+theme_color:
+  enable: true
+  main: "#1E90FF" # 道奇蓝，代表科技与创新
+  paginator: "#00CED1" # 暗青色，金属光泽感
+  button_hover: "#FF4500" # 橙红色，霓虹高亮
+  text_selection: "#20B2AA" # 亮青色，突出选中效果
+  link_color: "#4682B4" # 钢蓝，冷静的链接色
+  meta_color: "#B0C4DE" # 浅钢蓝，元数据柔和展示
+  hr_color: "#2F4F4F" # 深石板灰，分割线科技感
+  code_foreground: "#00FF7F" # 春绿色，代码文字醒目
+  code_background: "rgba(10, 25, 47, 0.9)" # 深蓝黑，代码块深邃感
+  toc_color: "#00CED1" # 暗青色，目录与分页一致
+  blockquote_padding_color: "#1E90FF" # 道奇蓝，引用边框
+  blockquote_background_color: "rgba(30, 144, 255, 0.1)" # 半透明主色，引用背景
+  scrollbar_color: "#1E90FF" # 道奇蓝，滚动条统一风格
+  meta_theme_color_light: "#F0F8FF" # 爱丽丝蓝，浅模式地址栏
+  meta_theme_color_dark: "#0A192F" # 深海军蓝，暗模式地址栏
 
 # The user interface setting of category and tag page
 # Choose: index - same as Homepage UI / default - same as archives UI
@@ -827,8 +834,8 @@ beautify:
 font:
   global_font_size:
   code_font_size:
-  font_family:
-  code_font_family:
+  font_family: '"Noto Sans SC", sans-serif'
+  code_font_family: '"Fira Code", "Noto Sans SC", monospace'
 
 # Font settings for the site title and site subtitle
 blog_title_font:
@@ -875,7 +882,7 @@ canvas_fluttering_ribbon:
 canvas_nest:
   enable: false
   # Color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-  color: '0,0,255'
+  color: "0,0,255"
   # The opacity of line (0~1)
   opacity: 0.7
   # The z-index property of the background
@@ -914,7 +921,7 @@ clickShowText:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox:
+lightbox: medium_zoom
 
 # --------------------------------------
 # Tag Plugins settings
@@ -924,7 +931,7 @@ lightbox:
 series:
   enable: false
   # Order by title or date
-  orderBy: 'title'
+  orderBy: "title"
   # Sort of order. 1, asc for ascending; -1, desc for descending
   order: 1
   number: true
@@ -938,12 +945,12 @@ abcjs:
 # Mermaid
 # https://github.com/mermaid-js/mermaid
 mermaid:
-  enable: false
+  enable: true
   # Write Mermaid diagrams using code blocks
-  code_write: false
+  code_write: true
   # built-in themes: default / forest / dark / neutral
   theme:
-    light: default
+    light: forest
     dark: dark
 
 # chartjs
@@ -954,16 +961,16 @@ chartjs:
   # The default settings are only used when the MD syntax is not specified.
   # General font color for the chart
   fontColor:
-    light: 'rgba(0, 0, 0, 0.8)'
-    dark: 'rgba(255, 255, 255, 0.8)'
+    light: "rgba(0, 0, 0, 0.8)"
+    dark: "rgba(255, 255, 255, 0.8)"
   # General border color for the chart
   borderColor:
-    light: 'rgba(0, 0, 0, 0.1)'
-    dark: 'rgba(255, 255, 255, 0.2)'
+    light: "rgba(0, 0, 0, 0.1)"
+    dark: "rgba(255, 255, 255, 0.2)"
   # Background color for scale labels on radar and polar area charts
   scale_ticks_backdropColor:
-    light: 'transparent'
-    dark: 'transparent'
+    light: "transparent"
+    dark: "transparent"
 
 # Note - Bootstrap Callout
 note:
@@ -1002,8 +1009,8 @@ snackbar:
   enable: false
   position: bottom-left
   # The background color of Toast Notification in light mode and dark mode
-  bg_light: '#49b1f5'
-  bg_dark: '#1f1f1f'
+  bg_light: "#49b1f5"
+  bg_dark: "#1f1f1f"
 
 # Instant.page
 # https://instant.page/
@@ -1034,7 +1041,7 @@ pwa:
 # Open graph meta tags
 # https://hexo.io/docs/helpers#open-graph
 Open_Graph_meta:
-  enable: true
+  enable: false
   option:
     # twitter_card:
     # twitter_image:
@@ -1059,8 +1066,14 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
+    - <link rel="preconnect" href="https://fonts.googleapis.com">
+    - <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    - <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
+    - <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+
     # - <script src="xxxx"></script>
 
 # CDN Settings
