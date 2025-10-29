@@ -1,8 +1,10 @@
 ---
 title: Markdown 入门到精通
+katex: true
+tags:
+  - Markdown
+categories:
 ---
-
-# Markdown 入门到精通<a id="one"></a>
 
 ## 一、文本格式化
 
@@ -156,107 +158,97 @@ title: Markdown 入门到精通
 
 ## 二、链接
 
-<table>
-	<thead>
-		<caption><a href="https://www.markdownguide.org/basic-syntax/#links">链接</a>语法</caption>
-		<tr>
-			<th>语法</th>
-			<th>对应的 HTML 语法</th>
-			<th>效果</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>全球最大的开发者社区：[GitHub](https://github.com)。</code></td>
-			<td><code>全球最大的开发者社区：&lt;a href="https://github.com"&gt;GitHub&lt;/a&gt;。</code></td>
-			<td>全球最大的开发者社区：<a href="https://github.com">GitHub</a>。</td>
-		</tr>
-	</tbody>
-</table>
+**语法**：
+
+```markdown
+全球最大的开发者社区：[GitHub](https://github.com)。
+```
+
+**对应的 HTML 语法**：
+
+```html
+全球最大的开发者社区：<a href="https://github.com">GitHub</a>。
+```
+
+**效果**：
+
+全球最大的开发者社区：[GitHub](https://github.com)。
 
 ### 1、链接的 title
 
 鼠标悬停在链接上时的提示文本。
 
-<table>
-	<thead>
-		<caption><a href="https://www.markdownguide.org/basic-syntax/#adding-titles" title="adding-titles | www.markdownguide.org">链接 title</a> 语法</caption>
-		<tr>
-			<th>语法</th>
-			<th>对应的 HTML 语法</th>
-			<th>效果</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>[GNU](https://www.gnu.org "伟大，无需多言。")。</code></td>
-			<td><code>&lt;a href="https://www.gnu.org" title="伟大，无需多言。"&gt;GNU&lt;/a&gt;。</code></td>
-			<td><a href="https://www.gnu.org" title="伟大，无需多言。">GNU</a>。</td>
-		</tr>
-	</tbody>
-</table>
+**语法**：
+
+```markdown
+[GNU](https://www.gnu.org "伟大，无需多言。")。
+```
+
+**对应的 HTML 语法**：
+
+```html
+<a href="https://www.gnu.org" title="伟大，无需多言。">GNU</a>。
+```
+
+**效果**：
+
+[GNU](https://www.gnu.org "伟大，无需多言。")。
 
 ### 2、字面 url
 
 字面 url，不同于超链接，将文本指向一个 url，而是将 url 原样写出来。
 
-<table>
-	<thead>
-		<caption>字面 url 语法</caption>
-		<tr>
-			<th>语法</th>
-			<th>对应的 HTML 语法</th>
-			<th>效果</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>&lt;https://www.markdownguide.org/&gt;。</code></td>
-			<td><code>&lt;a href="https://www.markdownguide.org/"&gt;https://www.markdownguide.org/&lt;/a&gt;。</code></td>
-			<td><a href="https://www.markdownguide.org/">https://www.markdownguide.org/</a>。</td>
-		</tr>
-	</tbody>
-</table>
+**语法**：
+
+```markdown
+<https://www.markdownguide.org/>。
+```
+
+**对应的 HTML 语法**：
+
+```html
+<a href="https://www.markdownguide.org/">https://www.markdownguide.org/</a>。
+```
+
+**效果**：
+
+<https://www.markdownguide.org/>。
 
 ### 3、邮箱链接
 
-<table>
-	<thead>
-		<caption>邮箱链接语法</caption>
-		<tr>
-			<th>语法</th>
-			<th>对应的 HTML 语法</th>
-			<th>效果</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>&lt;gnu@gnu.org&gt;。</code></td>
-			<td><code>&lt;a href="mailto:gnu@gnu.org"&gt;gnu@gnu.org&lt;/a&gt;。</code></td>
-			<td><a href="mailto:gnu@gnu.org">gnu@gnu.org</a>。</td>
-		</tr>
-	</tbody>
-</table>
+**语法**：
+
+```markdown
+<gnu@gnu.org>。
+```
+
+**对应的 HTML 语法**：
+
+```html
+<a href="mailto:gnu@gnu.org">gnu@gnu.org</a>。
+```
+
+**效果**：
+
+<gnu@gnu.org>。
 
 ## 三、图像
 
-<table>
-	<thead>
-		<caption>图像语法</caption>
-		<tr>
-			<th>语法</th>
-			<th>对应的 HTML 语法</th>
-			<th>效果</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>![GNU Logo](https://www.gnu.org/graphics/gerwinski-gnu-head.png)</code></td>
-			<td><code>&lt;img src="https://www.gnu.org/graphics/gerwinski-gnu-head.png" alt="GNU Logo" /&gt;</code></td>
-			<td><img src="https://www.gnu.org/graphics/gerwinski-gnu-head.png" alt="GNU Logo" /></td>
-		</tr>
-	</tbody>
-</table>
+**语法**：
+
+```markdown
+![GNU Logo](https://www.gnu.org/graphics/gerwinski-gnu-head.png)
+```
+
+**对应的 HTML 语法**：
+
+```html
+<img src="https://www.gnu.org/graphics/gerwinski-gnu-head.png" alt="GNU Logo" />
+```
+
+**效果**：
+
+![GNU Logo](https://www.gnu.org/graphics/gerwinski-gnu-head.png)
 
 ### 1、图像 title
 
@@ -264,90 +256,46 @@ title: Markdown 入门到精通
 
 ### 2、图像链接
 
-<table>
-	<thead>
-		<caption>图像链接语法</caption>
-		<tr>
-			<th>语法</th>
-			<th>对应的 HTML 语法</th>
-			<th>效果</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>[![GNU Logo](https://www.gnu.org/graphics/gerwinski-gnu-head.png)](https://www.gnu.org/)</code></td>
-			<td><code>&lt;a href="https://www.gnu.org/"&gt;&lt;img src="https://www.gnu.org/graphics/gerwinski-gnu-head.png" alt="GNU Logo" /&gt;&lt;/a&gt;</code></td>
-			<td><a href="https://www.gnu.org/"><img src="https://www.gnu.org/graphics/gerwinski-gnu-head.png" alt="GNU Logo" /></a></td>
-		</tr>
-	</tbody>
-</table>
+**语法**：
+
+```markdown
+[![GNU Logo](https://www.gnu.org/graphics/gerwinski-gnu-head.png)](https://www.gnu.org/)
+```
+
+**对应的 HTML 语法**：
+
+```html
+<a href="https://www.gnu.org/"><img src="https://www.gnu.org/graphics/gerwinski-gnu-head.png" alt="GNU Logo" /></a>
+```
+
+**效果**：
+
+[![GNU Logo](https://www.gnu.org/graphics/gerwinski-gnu-head.png)](https://www.gnu.org/)
 
 ## 四、引用块
 
-<table>
-	<thead>
-		<caption>引用块语法</caption>
-		<tr>
-			<th>语法</th>
-			<th>对应的 HTML 语法</th>
-			<th>效果</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>&gt; GNU's Not Unix!</code></td>
-			<td><code>&lt;blockquote&gt;GNU's Not Unix!&lt;/blockquote&gt;</code></td>
-			<td><blockquote>GNU's Not Unix!</blockquote></td>
-		</tr>
-	</tbody>
-</table>
+**语法**：
+
+```markdown
+> GNU's Not Unix!
+```
+
+**对应的 HTML 语法**：
+
+```html
+<blockquote>GNU's Not Unix!</blockquote>
+```
+
+**效果**：
+
+> GNU's Not Unix!
 
 ## 五、列表
 
 ### 1、有序列表
 
-<table>
-	<thead>
-		<caption>有序列表语法</caption>
-		<tr>
-			<th>语法</th>
-			<th>对应的 HTML 语法</th>
-			<th>效果</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><pre><code class='language-markdown' lang='markdown'>
-</code></pre>
-
-
-	</td>
-			<td><code>&lt;ul</code></td>
-			<td><blockquote>GNU's Not Unix!</blockquote></td>
-		</tr>
-	</tbody>
-</table>
-
-1. Python
-2. C/C++
-
-<ol>
-<li>C/C++</li>
-
-</ol>
-<pre><code class='language-markdown' lang='markdown'>编写程序的 7 个步骤：
-
-1. 定义程序的目标；
-2. 设计程序；
-3. 编写代码；
-4. 编译；
-5. 运行程序
-6. 测试和调试
-7. 维护和修改
-</code></pre>
-<p>&nbsp;</p>
-
-
+**语法**：
+  
 ```markdown
 编写程序的 7 个步骤：
 
@@ -360,53 +308,172 @@ title: Markdown 入门到精通
 7. 维护和修改
 ```
 
+**对应的 HTML 语法**：
 
+```html
+<p>编写程序的 7 个步骤：</p>
+<ol>
+    <li>定义程序的目标；</li>
+    <li>设计程序；</li>
+    <li>编写代码；</li>
+    <li>编译；</li>
+    <li>运行程序</li>
+    <li>测试和调试</li>
+    <li>维护和修改</li>
+</ol>
+```
+
+**效果**：
+
+编写程序的 7 个步骤：
+
+1. 定义程序的目标；
+2. 设计程序；
+3. 编写代码；
+4. 编译；
+5. 运行程序
+6. 测试和调试
+7. 维护和修改
 
 ### 2、无序列表
+
+
+**语法**：
+
+```markdown
+- React
+- Vue
+- Astro
+```
+
+**对应的 HTML 语法**：
+
+```html
+<ul>
+    <li>React</li>
+    <li>Vue</li>
+    <li>Astro</li>
+</ul>
+```
+
+**效果**：
 
 - React
 - Vue
 - Astro
 
-## 分割线
+## 六、分割线
+
+**语法**：
+
+```markdown
+---
+```
+
+**对应的 HTML 语法**：
+
+```html
+<hr />
+```
+
+**效果**：
 
 ---
 
-## 代码
+## 七、代码
 
-### 行内代码
+### 1、行内代码
 
-`printf("Hello, world!\n");`
+**语法**：
 
-`![GitHub](https://github.com)`
+```markdown
+在 C 语言中打印“Hello world!”：`printf("Hello world!\n");`。
+```
 
-### 代码块
+**对应的 HTML 语法**：
+
+```html
+在 C 语言中打印“Hello world!”：<code>printf("Hello world!\n");</code>。
+```
+
+**效果**：
+
+在 C 语言中打印“Hello world!”：`printf("Hello world!\n");`。
+
+### 2、代码块
+
+**语法**：
+
+````markdown
+```c
+#include <stdio.h>
+
+int main(void) {
+    printf("Hello world!\n");
+    return 0;
+}
+```
+````
+
+**对应的 HTML 语法**：
+
+```html
+<pre><code>#include &lt;stdio.h&gt;
+int main(void) {
+    printf("Hello world!\n");
+    return 0;
+}</code></pre>
+```
+
+**效果**：
 
 ```c
 #include <stdio.h>
 
 int main(void) {
-	printf("Hello, world!\n");
-	return 0;
+    printf("Hello world!\n");
+    return 0;
 }
 ```
 
-## 进阶语法
 
-### 转义字符
+## 八、进阶语法
 
-\`\*\*重要内容\*\*\`
+### 1、转义字符
 
-\\\`\*\*重要内容\*\*\`\\
+Markdown 语法中涉及到的字符，如果想正常显示，则需要使用反斜杠（`\`）转移。
 
-`\`
+### 2、表格
 
-### 表格
+**语法**：
+
+```markdown
+| 网站 | 说明 |
+| ---: | :--- |
+| [GitHub](https://github.com) | 全球最大的开发者社区。 |
+| [GNU](https://www.gnu.com) | GNU's Not Unix! |
+```
+
+`---:`、`:---`、`:---:` 分别表示对应列右、左、居中对齐。
+
+**对应的 HTML 语法**：
+
+```html
+
+```
+
+**效果**：
 
 | 网站 | 说明 |
 | ---: | :--- |
 | [GitHub](https://github.com) | 全球最大的开发者社区。 |
 | [GNU](https://www.gnu.com) | GNU's Not Unix! |
+
+
+|                         网站 | 说明                   |
+| ---------------------------: | :--------------------- |
+| [GitHub](https://github.com) | 全球最大的开发者社区。 |
+|   [GNU](https://www.gnu.com) | GNU's Not Unix!        |
 
 #### 表格的跨行跨列（HTML）
 
@@ -481,7 +548,7 @@ int main(void) {
 
 GNU/Linux[^1] 是一个伟大的开源项目。
 
-[^1]:GNU/Linux refers to an operating system that combines the GNU Project's software components with the Linux kernel. 
+[^1]: GNU/Linux refers to an operating system that combines the GNU Project's software components with the Linux kernel.
 
 ### 上下标
 
@@ -491,17 +558,14 @@ GNU/Linux[^1] 是一个伟大的开源项目。
 
 ### 待办列表
 
-- [ ] 任务 1 
-- [ ] 任务 2 
-- [ ] 任务 3 
-- [ ] 任务 4 
-
+- [ ] 任务 1
+- [ ] 任务 2
+- [ ] 任务 3
+- [x] 任务 4
 
 ### 锚点
 
-
 - [1.Markdown 入门到精通](#one)
-
 
 ### 内容目录
 
@@ -567,7 +631,6 @@ $$
 
 :smiley:
 
-
 ### 3、流程图
 
 ```mermaid
@@ -575,7 +638,6 @@ graph TD;
 	A --> B;
 	A --> |你好| C;
 ```
-
 
 ```mermaid
  mindmap
